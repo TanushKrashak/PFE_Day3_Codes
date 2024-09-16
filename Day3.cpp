@@ -41,9 +41,9 @@ string animatedPrint(string message, int userInput = -1, double delayBetweenChar
         cout << c;
         cout.flush();
         if (c != '\n')
-            this_thread::sleep_for(chrono::milliseconds(int(delayBetweenChars * /*100*/0)));
+            this_thread::sleep_for(chrono::milliseconds(int(delayBetweenChars * 1000)));
         else
-            this_thread::sleep_for(chrono::milliseconds(int(delayBetweenLine * /*100*/0)));
+            this_thread::sleep_for(chrono::milliseconds(int(delayBetweenLine * 1000)));
     }
     cout << "\033[0m";
     if (newLine == true)
